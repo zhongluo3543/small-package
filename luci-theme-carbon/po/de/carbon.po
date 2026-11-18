@@ -16,6 +16,10 @@ msgid "%d on Wi-Fi"
 msgstr "%d im WLAN"
 
 #: htdocs/luci-static/carbon/carbon.js
+msgid "%d s average"
+msgstr "Durchschnitt über %d s"
+
+#: htdocs/luci-static/carbon/carbon.js
 msgid "%dd %dh"
 msgstr "%d T. %d Std."
 
@@ -142,10 +146,6 @@ msgid "Connected"
 msgstr "Verbunden"
 
 #: htdocs/luci-static/carbon/carbon.js
-msgid "Connected Devices"
-msgstr "Verbundene Geräte"
-
-#: htdocs/luci-static/carbon/carbon.js
 msgid "Connected over Wi-Fi"
 msgstr "Über WLAN verbunden"
 
@@ -170,16 +170,24 @@ msgid "Dark"
 msgstr "Dunkel"
 
 #: htdocs/luci-static/carbon/carbon.js
-msgid "Devices"
-msgstr "Geräte"
+msgid "Device speeds"
+msgstr "Gerätegeschwindigkeit"
+
+#: htdocs/luci-static/carbon/carbon.js
+msgid "Device speeds use existing traffic statistics. Only traffic observed by this router is included."
+msgstr "Die Gerätegeschwindigkeit nutzt vorhandene Verkehrsstatistiken. Nur von diesem Router erfasster Verkehr wird berücksichtigt."
 
 #: htdocs/luci-static/carbon/carbon.js
 msgid "DHCP client"
 msgstr "DHCP-Client"
 
 #: htdocs/luci-static/carbon/carbon.js
-msgid "DHCP clients"
-msgstr "DHCP-Clients"
+msgid "DHCP lease"
+msgstr "DHCP-Lease"
+
+#: htdocs/luci-static/carbon/carbon.js
+msgid "Discovered devices"
+msgstr "Erkannte Geräte"
 
 #: htdocs/luci-static/carbon/carbon.js
 msgid "Download"
@@ -206,16 +214,16 @@ msgid "Expand sidebar"
 msgstr "Seitenleiste ausklappen"
 
 #: htdocs/luci-static/carbon/carbon.js
-msgid "Fixed IP"
-msgstr "Feste IP"
-
-#: htdocs/luci-static/carbon/carbon.js
 msgid "Free"
 msgstr "Frei"
 
 #: htdocs/luci-static/carbon/carbon.js
 msgid "Game console"
 msgstr "Spielkonsole"
+
+#: htdocs/luci-static/carbon/carbon.js
+msgid "Gateway"
+msgstr "Gateway"
 
 #: htdocs/luci-static/carbon/carbon.js
 msgid "GitHub (opens in a new tab)"
@@ -270,6 +278,10 @@ msgid "IPK updates are downloaded over HTTPS and checked against the release SHA
 msgstr "IPK-Updates werden über HTTPS geladen und mit SHA-256 und Dateigröße des Releases abgeglichen."
 
 #: htdocs/luci-static/carbon/carbon.js
+msgid "Known to this router"
+msgstr "Diesem Router bekannt"
+
+#: htdocs/luci-static/carbon/carbon.js
 msgid "LAN IP"
 msgstr "LAN-IP"
 
@@ -314,6 +326,10 @@ msgid "Manage"
 msgstr "Verwalten"
 
 #: htdocs/luci-static/carbon/carbon.js
+msgid "May include offline devices."
+msgstr "Kann auch Geräte enthalten, die offline sind."
+
+#: htdocs/luci-static/carbon/carbon.js
 msgid "Memory"
 msgstr "Arbeitsspeicher"
 
@@ -328,6 +344,10 @@ msgstr "Mirror-Präfix"
 #: htdocs/luci-static/carbon/carbon.js
 msgid "Need more settings? Switch to"
 msgstr "Mehr Einstellungen nötig? Wechseln Sie zum"
+
+#: htdocs/luci-static/carbon/carbon.js
+msgid "Neighbor entry"
+msgstr "Nachbareintrag"
 
 #: htdocs/luci-static/carbon/carbon.js
 msgid "Network devices"
@@ -433,10 +453,6 @@ msgstr "Zufällige MAC-Adresse"
 msgid "Reboot"
 msgstr "Neustart"
 
-#: htdocs/luci-static/carbon/carbon.js
-msgid "Recently active"
-msgstr "Kürzlich aktiv"
-
 #: htdocs/luci-static/resources/view/system/carbon-update.js
 msgid "Release metadata or package version is invalid. Nothing was installed."
 msgstr "Release-Metadaten oder Paketversion ungültig. Es wurde nichts installiert."
@@ -516,10 +532,6 @@ msgstr "Software"
 #: htdocs/luci-static/carbon/carbon.js
 msgid "Speaker"
 msgstr "Lautsprecher"
-
-#: htdocs/luci-static/carbon/carbon.js
-msgid "Static"
-msgstr "Statisch"
 
 #: htdocs/luci-static/carbon/carbon.js
 msgid "Static address"
@@ -652,6 +664,10 @@ msgstr "Update wird geprüft…"
 #: htdocs/luci-static/resources/view/system/carbon-update.js
 msgid "View releases on GitHub"
 msgstr "Releases auf GitHub ansehen"
+
+#: htdocs/luci-static/carbon/carbon.js
+msgid "Waiting for next sample"
+msgstr "Warten auf nächste Messung"
 
 #: htdocs/luci-static/carbon/carbon.js
 msgid "WAN IP"

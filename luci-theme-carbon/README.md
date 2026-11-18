@@ -1,3 +1,4 @@
+
 <div align="center">
 
 <img src="htdocs/luci-static/carbon/logo.svg" width="72" height="72" alt="Carbon">
@@ -17,19 +18,22 @@ A clean, glass-style LuCI theme for OpenWrt — built for everyday users.
 
 **[Live demo](https://mrjoechen.github.io/luci-theme-carbon/) · [English demo](https://mrjoechen.github.io/luci-theme-carbon/?lang=en)**
 
+https://github.com/user-attachments/assets/b78ccf2b-679e-459b-88ea-b4f82da6e03f
+
 </div>
 
 ## Screenshots
 
 
-<p align="center"><img src=".github/screenshots/overview-light.jpg" alt="Light" width="100%"></p>
+<p align="center"><img src="docs/screenshots/overview-light.jpg" alt="Light" width="100%"></p>
 
-<p align="center"><img src=".github/screenshots/overview-dark.jpg" alt="Dark" width="100%"></p>
+<p align="center"><img src="docs/screenshots/overview-dark.jpg" alt="Dark" width="100%"></p>
 
 ## Features
 
 - **Dashboard** on *Status → Overview*: live traffic chart for any interface, CPU / memory / storage rings, memory breakdown, load sparkline, connection count, uptime, temperature sensors (thermal zones and hwmon), WAN IPv4/IPv6, connected devices and interface status. LuCI's original status widgets are kept behind *Show detailed status* and stop polling while collapsed.
-- **Connected devices** — DHCPv4/v6 leases, Wi‑Fi stations (band and signal) and ARP neighbours are merged, so static-IP clients show up too. Devices are recognised by hostname and MAC vendor prefix (35 brands, ~9,200 IEEE OUI prefixes).
+- **Device upload/download speeds**: when an existing `nlbwmon` collector is available, Carbon reads its per-MAC counters and displays sampled averages at the configured collection interval (normally 30 seconds, minimum display interval 5 seconds). Only traffic observed by this router is included; bridge traffic, offloaded traffic and traffic through other gateways may be missing. The theme does not install or start a collector, change its settings, or modify firewall/offload rules. Unsupported systems keep the existing device list; initial samples, missing records and counter resets show `—`. Reads pause while the page is hidden. DHCP leases and their remaining time are independent of speed readings.
+- **Discovered devices** — DHCPv4/v6 leases, Wi‑Fi stations (band and signal) and IPv4 ARP neighbours are merged by MAC. Discovery still works with the local DHCP server disabled, including when LAN obtains its own address by DHCP. Gateways, neighbour entries and DHCP leases are labelled separately; a missing local lease does not imply a fixed IP. Devices are recognised by hostname and MAC vendor prefix (35 brands, ~9,200 IEEE OUI prefixes). The count includes devices known to this router, possibly offline ones, and is not a live census of the entire network. Recognisable separate uplinks are excluded; a gateway sharing LAN is retained and labelled. Without an interface named `lan`, custom interface roles may be ambiguous, so discoveries on those interfaces are retained.
 - **Simple / Pro navigation** — *Simple* shows only the pages most people need (overview, internet, Wi‑Fi, software, password, backup, reboot); *Pro* shows the full LuCI menu with an icon for every page.
 - **Frosted-glass sidebar** that collapses into an icon rail (button on the sidebar edge or <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>\\</kbd>); hovering a rail icon opens its sub-menu.
 - **Light / dark / auto** theme switch (top-right) and a **language switch** (bottom-left) for every installed LuCI language. Theme strings ship in English, Simplified and Traditional Chinese, German, Spanish, French, Italian, Japanese, Korean, Brazilian Portuguese, Russian, Turkish and Vietnamese; more can be added as gettext files in `po/`.
