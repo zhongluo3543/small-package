@@ -9,11 +9,11 @@ include $(TOPDIR)/rules.mk
 KAIPLUS_ARCH_x86_64:=amd64
 KAIPLUS_ARCH_aarch64:=arm64
 KAIPLUS_ARCH:=$(KAIPLUS_ARCH_$(ARCH))
-KAIPLUS_HASH_x86_64:=1de111510ed1f7f2c26d65db2dc8322aad9c47492454864f8b2b7981da250107
-KAIPLUS_HASH_aarch64:=78cdeda55360063d326dfaa02cc45882f75e8400391b3abe071a196acad42c78
+KAIPLUS_HASH_x86_64:=99be1f513298639501a62761afc7b19bbc30f984c9e7c962375935c1b78baf7d
+KAIPLUS_HASH_aarch64:=04d64dec22d5f9d4b665c0a80be8b62591c48a9584a10f1ea1e014eb6e56cea8
 
 PKG_NAME:=kaiplus
-PKG_VERSION:=1.0.16
+PKG_VERSION:=1.0.19
 PKG_RELEASE:=1
 
 KAIPLUS_URL_FILE:=kaiplus-linux-$(KAIPLUS_ARCH)
@@ -41,6 +41,8 @@ define Package/$(PKG_NAME)
 	TITLE:=KaiPlus
 	URL:=https://github.com/linkease/istore-packages
 	DEPENDS:=@(x86_64||aarch64) +linkease-app-entry +changeguard
+	# Build matrix: OpenWrt 21.02 OPKG uses -N; 25.12 APK uses -rN.
+	EXTRA_DEPENDS:=changeguard (>=0.3.4-$(if $(CONFIG_USE_APK),r)1)
 endef
 
 define Package/$(PKG_NAME)/description
